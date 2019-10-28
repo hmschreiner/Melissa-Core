@@ -172,7 +172,7 @@ the city of your choice: ')
     lm = 'lm/sphinx.lm'
     dic = 'lm/sphinx.dic'
 
-    modules = 'melissa.actions'
+    modules = 't800.actions'
     actions_db_file = ':memory:'
     memory_db = './data/memory.db'
 

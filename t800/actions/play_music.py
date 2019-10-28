@@ -4,8 +4,8 @@ import sys
 import random
 
 # Melissa
-from melissa import profile
-from melissa.tts import tts
+from t800 import profile
+from t800.tts import tts
 
 WORDS = {
     'play_shuffle': {

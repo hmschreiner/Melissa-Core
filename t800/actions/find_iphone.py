@@ -2,8 +2,8 @@ from pyicloud import PyiCloudService
 from pyicloud.exceptions import PyiCloudFailedLoginException
 
 # Melissa
-from melissa import profile
-from melissa.tts import tts
+from t800 import profile
+from t800.tts import tts
 
 WORDS = {'find_iphone': {'groups': [['find', 'iphone'], [
     'ring', 'iphone']]}, 'iphone_battery': {'groups': [['battery', 'iphone']]}}

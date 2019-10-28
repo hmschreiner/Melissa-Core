@@ -1,7 +1,7 @@
 from horoscope_generator import HoroscopeGenerator
 
-# Melissa
-from melissa.tts import tts
+# T-800
+from t800.tts import tts
 
 WORDS = {
     'tell_horoscope': {

@@ -1,20 +1,37 @@
 FROM ubuntu:latest
 
-MAINTAINER Tanay Pant "tanay1337@gmail.com"
+LABEL maintainer="Henrique Schreiner hms.sud@gmail.com"
 
-
-RUN apt-get update -y 
-RUN apt-get install -y gcc automake autoconf libtool bison swig python-dev libpulse-dev espeak multimedia-jack
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update -y
+RUN apt-get install -y \
+    python-pip \
+    gcc \
+    automake \
+    autoconf \
+    libtool \
+    bison \
+    swig \
+    python-dev \
+    libpulse-dev \
+    espeak \
+    multimedia-jack \
+    git \
+    python-pyaudio \
+    python-gst-1.0 \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-ugly \
+    gstreamer1.0-tools
 
 COPY . /app
 
 WORKDIR /app
 
-COPY melissa/data/memory.db.default melissa/data/memory.db
+COPY t800/data/memory.db.default t800/data/memory.db
 
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["FLASK_APP=melissa/__main__.py", "flask", "run"]
-
+CMD ["python", "-m", "t800"]
+# CMD ["FLASK_APP=t800/__main__.py", "python", "-m", "flask", "run"]

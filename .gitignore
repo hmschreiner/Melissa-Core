@@ -1,4 +1,4 @@
-profile.json
+!profile.json
 data/memory.db
 *.pyc
 recording.wav

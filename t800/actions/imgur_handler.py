@@ -3,9 +3,9 @@ import sqlite3
 from datetime import datetime
 from imgurpython import ImgurClient
 
-# Melissa
-from melissa import profile
-from melissa.tts import tts
+# T-800
+from t800 import profile
+from t800.tts import tts
 
 WORDS = {'image_uploader': {'groups': ['upload']},
          'show_all_uploads': {'groups': [['all', 'uploads'],

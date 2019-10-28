@@ -1,8 +1,8 @@
 import random
 
-# Melissa
-from melissa import profile
-from melissa.tts import tts
+# T-800
+from t800 import profile
+from t800.tts import tts
 
 WORDS = {'who_are_you': {'groups': [['who', 'are', 'you']]},
          'toss_coin': {'groups': [['heads', 'tails'],
@@ -35,7 +35,7 @@ def how_am_i(text):
         'You are goddamn handsome!',
         'My knees go weak when I see you.',
         'You are sexy!',
-        'You look like the kindest person that I have met.'
+        'You look like the kindest person that I have ever met!'
     ]
     tts(random.choice(replies))
 

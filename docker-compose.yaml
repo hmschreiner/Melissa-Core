@@ -1,0 +1,22 @@
+version: '3'
+services:
+  t800:
+    build: .
+    container_name: t-800
+    restart: always
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/shm:/dev/shm
+      - ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native
+      - ~/.config/pulse/cookie:/root/.config/pulse/cookie
+      - ./:/app
+    devices:
+      - /dev/snd
+    environment:
+      - PULSE_SERVER=unix:/run/user/1001/pulse/native
+      - FLASK_DEBUG=1
+      - FLASK_ENV=development
+    ports:
+      - 5000:5000
+    stdin_open: true
+    tty: true

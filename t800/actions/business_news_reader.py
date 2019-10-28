@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Melissa
-from melissa.tts import tts
+# T-800
+from t800.tts import tts
 
 WORDS = {'news_reader': {'groups': [['business', 'news']]}}
 

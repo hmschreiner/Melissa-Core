@@ -1,5 +1,5 @@
 # Melissa
-from melissa.tts import tts
+from t800.tts import tts
 
 
 WORDS = {'spell_text': {'groups': ['spell']}}

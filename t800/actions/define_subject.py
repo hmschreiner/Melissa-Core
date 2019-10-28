@@ -1,11 +1,10 @@
 import re
 import wikipedia
 
-# Melissa
-from melissa.tts import tts
+# T-800
+from t800.tts import tts
 
-WORDS = {'define_subject': {'groups': ['define']}
-         }
+WORDS = {'define_subject': {'groups': ['define']}}
 
 
 def define_subject(speech_text):

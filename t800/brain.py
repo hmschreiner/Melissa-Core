@@ -1,6 +1,6 @@
 from collections import namedtuple
 
-# Melissa
+# T-800
 import actions_db
 
 order_match_factor = 1.5
@@ -47,9 +47,11 @@ def query(text):
 
     # Make the following easier to read using namedtuple.
     sql_row_def = namedtuple('sql_row_def', 'word, word_order, word_group, word_count, function') # noqa
+
     scoring = {}
     for row in rows:
         sql_row = sql_row_def._make(row)
+        print(sql_row)
         if not sql_row.word_group in scoring: # noqa
             # If the word_group is not already in the scoring
             # dictionary ...
@@ -83,6 +85,8 @@ def query(text):
 
     # Score the word_groups according to the assembled match
     # results.
+    #
+    print(scoring)
     top_scores = []
     for word_group, fields in scoring.iteritems():
         # A word_group can only enter scoring when all the words

@@ -1,9 +1,8 @@
 import sqlite3
 from datetime import datetime
 
-# Melissa
-from melissa import profile
-from melissa.tts import tts
+from t800 import profile
+from t800.tts import tts
 
 WORDS = {
     'show_all_notes': {

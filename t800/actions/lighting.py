@@ -1,7 +1,7 @@
 import subprocess
 
-# Melissa
-from melissa.tts import tts
+# T-800
+from t800.tts import tts
 
 WORDS = {'very_dark': {'groups': ['dark']},
          'feeling_angry': {'groups': [['feeling', 'angry']]},

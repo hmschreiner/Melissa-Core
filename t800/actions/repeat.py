@@ -1,5 +1,4 @@
-# Melissa
-from melissa.tts import tts
+from t800.tts import tts
 
 
 WORDS = {'repeat_text': {'groups': ['repeat', 'say']}}

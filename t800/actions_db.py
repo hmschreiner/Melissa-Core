@@ -4,7 +4,7 @@ import sqlite3
 import sys
 import os
 
-# Melissa
+# T-800
 import profile
 
 con = 0
@@ -87,7 +87,7 @@ def insert_words(con, cur, name, words, priority):
 
         con.commit()
 
-    # Melissa format, dictionary of function name
+    # T-800 format, dictionary of function name
     # and list of word match groups (lists)
     elif isinstance(words, type({})):  # if words is a dictionary
 
@@ -191,6 +191,7 @@ def assemble_actions_db():
                 print '    WORDS not found for module ' + name
 
     # con.close()
+
 
 if con == 0:
     assemble_actions_db()
